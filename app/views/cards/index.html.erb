@@ -1,12 +1,50 @@
 <h1>All tips</h1>
 
+
 <ul>
   <% @cards.each do |card| %>
     <li>Name : <%= card.title %></li>
   <% end %>
 </ul>
 
+
 <h2>Per category</h2>
+
+
+<h3>Tricks</h3>
+
+<ul>
+  <%= @cards.each do |card| %>
+    <li>Name : <%= card.title %> </li>
+</ul>
+
+<h3>Weapons</h3>
+
+<ul>
+  <%= @cards.each do |card| %>
+    <li>Name : <%= card.title %> </li>
+</ul>
+
+
+<h2>Per level</h2>
+
+
+<h3>Beginner</h3>
+
+<ul>
+  <%= @cards.each do |card| %>
+    <li>Name : <%= card.title %> </li>
+</ul>
+
+<h3>Intermediate</h3>
+
+<ul>
+  <%= @cards.each do |card| %>
+    <li>Name : <%= card.title %> </li>
+</ul>
+
+<h3>Confirmed</h3>
+
 <ul>
   <%= @cards.each do |card| %>
     <li>Name : <%= card.title %> </li>
