@@ -14,15 +14,17 @@
 <h3>Tricks</h3>
 
 <ul>
-  <%= @cards.each do |card| %>
+  <% @cards.tricks.each do |card| %>
     <li>Name : <%= card.title %> </li>
+  <% end %>
 </ul>
 
 <h3>Weapons</h3>
 
 <ul>
-  <%= @cards.each do |card| %>
+  <% @cards.weapons.each do |card| %>
     <li>Name : <%= card.title %> </li>
+  <% end %>
 </ul>
 
 
@@ -32,20 +34,23 @@
 <h3>Beginner</h3>
 
 <ul>
-  <%= @cards.each do |card| %>
+  <% @cards.beginner.each do |card| %>
     <li>Name : <%= card.title %> </li>
+  <% end %>
 </ul>
 
 <h3>Intermediate</h3>
 
 <ul>
-  <%= @cards.each do |card| %>
+  <% @cards.intermediate.each do |card| %>
     <li>Name : <%= card.title %> </li>
+  <% end %>
 </ul>
 
 <h3>Confirmed</h3>
 
 <ul>
-  <%= @cards.each do |card| %>
+  <% @cards.confirmed.each do |card| %>
     <li>Name : <%= card.title %> </li>
+  <% end %>
 </ul>
