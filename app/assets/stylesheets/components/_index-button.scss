@@ -1,0 +1,62 @@
+.btn-index {
+  min-height: 16px;
+  padding: 12px 20px;
+  transition-property: text-shadow, background-color, border, color;
+  transition-duration: 1s;
+  position: relative;
+  background-color: #282828;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #81898c;
+  line-height: 1.15;
+  text-transform: uppercase;
+  margin: 0 0 40px 0;
+  width: fit-content;
+  background-size: 2px;
+  border: 1px solid #81898c;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #97cde1;
+  background-color: transparent;
+  background-color: #080127;
+  color: #94bbc2;
+  box-shadow: 0px 0px 25px #79d9ff;
+  border: 2px solid #79d9ff;
+  min-width: 162px;
+  display: block;
+  min-width: 150px;
+  max-width: 200px;
+  text-align: center;
+  border-color: 0px 0px 10px #79d9ff;
+  border-radius: 3px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
+}
+
+.button-index {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes slidein {
+  from {
+    background-color: #080127;
+    text-shadow: 0px 0px 0px #97cde1;
+    color: #94bbc2;
+  }
+
+  50% {
+    background-color: #080127;
+    text-shadow: 0px 0px 10px #79d9ff;
+    color: #79d9ff;
+  }
+
+  to {
+    background-color: #080127;
+    text-shadow: 0px 0px 0px #97cde1;
+    color: #94bbc2; 
+  }
+}
