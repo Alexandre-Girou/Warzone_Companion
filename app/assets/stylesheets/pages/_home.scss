@@ -1,1 +1,12 @@
 // Specific CSS for your home-page
+body {
+  width: 100%;
+}
+
+html {
+  width: 100%;
+}
+
+.big-container {
+  min-height: calc(100vh - 90px);
+}
