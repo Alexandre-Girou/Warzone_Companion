@@ -1,5 +1,4 @@
-.btn-index {
-  min-height: 16px;
+.btn-signin {
   padding: 12px 20px;
   transition-property: text-shadow, background-color, border, color;
   transition-duration: 1s;
@@ -12,7 +11,6 @@
   color: #81898c;
   line-height: 1.15;
   text-transform: uppercase;
-  margin: 0 0 40px 0;
   width: fit-content;
   background-size: 2px;
   border: 1px solid #81898c;
@@ -24,24 +22,23 @@
   color: #94bbc2;
   box-shadow: 0px 0px 25px #79d9ff;
   border: 2px solid #79d9ff;
-  min-width: 162px;
   display: block;
-  min-width: 150px;
-  max-width: 200px;
   text-align: center;
   border-color: 0px 0px 10px #79d9ff;
-  border-radius: 3px;
+  border-radius: 50%;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: slidein;
   text-decoration: none;
+  height: 70px;
+  width: 70px;
 }
 
-.btn-index:hover {
+.btn-signin:hover {
   text-decoration: none;
 }
 
-.button-index {
+.button-signin {
   display: flex;
   justify-content: center;
 }
