@@ -6,7 +6,13 @@
 <p>Upvote les cartes les plus pertinentes à tes yeux et lache tes meilleurs comms</p> <%# POLICE DE OUF A TESTER%>
 <p>Attention la commu, fais mentir les rageux en respectant autrui</p> <%# POLICE DE OUF A TESTER%> <%# FIN DE L'ENCART SUPER COOL ICI%>
 
-<h2> <%= link_to "Index all" %></h2> <%#BOUTON%>
+<div class="button-index">
+  <%= link_to "Index all", cards_path, class: 'btn-index' %>
+</div>
+
+<div class="button-signin">
+  <%= link_to "Sign In", new_user_session_path, class: 'btn-signin' %>
+</div>
 
 <h2>Latest trick</h2> <%# POLICE DE OUF A TESTER%>
 <p><strong>Tip Name</strong></p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
