@@ -10,10 +10,7 @@
   </div>    
 </div>
 
-
-    <p>Attention la commu, fais mentir les rageux en respectant autrui</p> <%# POLICE DE OUF A TESTER%>
-    <p> <%= link_to "Inscris toi" %> pour créer et gérer tes decks, et enrichis la commu de ton savoir </p> <%# POLICE DE OUF A TESTER%>
-
+<p> <%= link_to "Inscris toi" %> pour créer et gérer tes decks, et enrichis la commu de ton savoir </p> <%# POLICE DE OUF A TESTER%>
 
 <div class="button-index">
   <%= link_to "All Cards", cards_path, class: 'btn-index' %>
@@ -24,21 +21,29 @@
 </div>
 
   <h2>Latest trick</h2> <%# POLICE DE OUF A TESTER%>
+<div class="cards">
+  <div class="card">
+    <div class="card-title">
+      <a href="#" class="toggle-info btn">
+        <span class="left"></span>
+        <span class="right"></span>
+      </a>
+      <h2><%= @card.title %></h2>
+    </div>
+    <div class="hidden-content">
+      <div class="card_image-holder">
+        <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+      </div>
+        <div class="card-description">
+          <%= @card.content %>
+        </div>
+        <div class="card-actions">
+          <a href="#" class="btn">View More</a>
+        </div>
+    </div>
+  </div>
+</div>
+
   <p><strong>Tip Name</strong></p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
-  <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
   <p>Blabla tricks bla astuce blabla appuie sur espace en même temps wow blabla</p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>
 </div>
