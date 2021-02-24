@@ -27,9 +27,11 @@ import "bootstrap";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { handleForm } from "../forms/form.js"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  handleForm()
   // initSelect2();
 });
 
