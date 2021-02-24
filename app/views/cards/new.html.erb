@@ -1,0 +1,9 @@
+<div <%#UNE CLASSE SYMPATHIQUE LA FAMILLE%> >
+  <%= simple_form_for @card do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category, collection: ["Tricks", "Weapons"] %>
+    <%= f.input :level, collection: ["Beginner", "Intermediate", "Confirmed"] %>
+    <%= f.input :content %>
+    <%= f.submit "Submit" %>
+  <% end %>
+</div>
