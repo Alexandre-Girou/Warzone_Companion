@@ -3,3 +3,32 @@
 .big-container {
   min-height: calc(100vh - 90px);
 }
+
+.intro {
+  display: flex;
+  align-content: center;
+  .img-intro {
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.3) 70.71%), url("intro_back.png");
+    height: 170px;
+    width: 100%;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,1);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background-size: cover;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    margin: auto;
+    margin: 15px;
+    float: left;
+    justify-content: space-around;
+  }
+  .text-intro {
+    font-size: 13px;
+    padding-top: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

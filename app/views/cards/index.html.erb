@@ -1,6 +1,5 @@
 <h1>All tips</h1>
 
-
 <%= form_tag cards_path, method: :get do %>
   <%= select_tag :category,
     options_for_select(['Tricks', 'Weapons']),
@@ -20,3 +19,93 @@
     <li>Name : <%= card.title %></li>
   <% end %>
 </ul>
+
+<div class= "show text-center">
+  <div class="row">
+    <% @cards.each do |card| %>
+      <div class="col-12 col-md-3">
+        <div class=<%#CLASSE DES CARTES%>>
+          <p><strong>Name : <%= card.title %></strong></p>
+          <p><strong>Brought to you by : <%= card.creator.username %></strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Per category</h2>
+
+
+<h3>Tricks</h3>
+
+<div class= "show text-center">
+    <% @cards.tricks.each do |card| %>
+      <p>Name : <%= card.title %> </p>
+    <% end %>
+</div>
+
+<h3>Weapons</h3>
+
+<div class= "show text-center">
+    <% @cards.weapons.each do |card| %>
+      <p>Name : <%= card.title %> </p>
+    <% end %>
+</div>
+
+
+<h2>Per level</h2>
+
+
+<h3>Beginner</h3>
+
+<div class= "show text-center">
+    <% @cards.beginner.each do |card| %>
+      <p>Name : <%= card.title %> </p>
+    <% end %>
+</div>
+
+<h3>Intermediate</h3>
+
+<div class= "show text-center">
+    <% @cards.intermediate.each do |card| %>
+      <p>Name : <%= card.title %> </p>
+    <% end %>
+</div>
+
+<h3>Confirmed</h3>
+
+<div class= "show text-center">
+    <% @cards.confirmed.each do |card| %>
+      <p>Name : <%= card.title %> </p>
+    <% end %>
+</div>
