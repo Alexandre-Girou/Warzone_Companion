@@ -3,21 +3,23 @@ class CardsController < ApplicationController
     @cards = Card.all
   end
 
-  def show
-    @card = Card.find(params[:id])
-  end
-
   def new
     @card = Card.new
   end
 
   def create
     @card = Card.new(card_params)
+    @card.creator = current_user
+
     if @card.save
       redirect_to @card
     else
       render 'new'
     end
+  end
+
+  def show
+    @card = Card.find(params[:id])
   end
 
   private
