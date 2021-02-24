@@ -14,3 +14,18 @@ $headers-font: "Nunito", "Helvetica", "sans-serif";
 //        font-url('FontFile.ttf') format('truetype')
 // }
 // $my-font: "Font Name";
+
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Roboto&display=swap');
+
+$body-font: 'Roboto', sans-serif;
+$headers-font: 'DotGothic16', sans-serif;
+
+h1, h2, h3 {
+  font-family: 'DotGothic16', sans-serif;
+  color: #9A8148;
+}
+
+p, li {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
