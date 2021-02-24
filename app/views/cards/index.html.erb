@@ -1,22 +1,7 @@
 <h1>All tips</h1>
 
-<%= form_tag cards_path, method: :get do %>
-  <%= select_tag :category,
-    options_for_select(['Tricks', 'Weapons']),
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%= select_tag :level,
-    options_for_select(['Beginner', 'Intermediate', 'Confirmed']),
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-
 <ul>
   <% @cards.each do |card| %>
     <li>Name : <%= card.title %></li>
   <% end %>
 </ul>
-
