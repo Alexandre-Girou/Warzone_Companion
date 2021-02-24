@@ -1,10 +1,15 @@
 class CardsController < ApplicationController
+
   def index
     @cards = Card.all
-  end
 
-  def show
-    @card = Card.find(params[:id])
+    if params[:category].present?
+      @cards = @cards.category(params[:category])
+    end
+
+    if params[:level].present?
+      @cards = @cards.level(params[:level])
+    end
   end
 
   def new
@@ -13,11 +18,17 @@ class CardsController < ApplicationController
 
   def create
     @card = Card.new(card_params)
+    @card.creator = current_user
+
     if @card.save
       redirect_to @card
     else
       render 'new'
     end
+  end
+
+  def show
+    @card = Card.find(params[:id])
   end
 
   private
