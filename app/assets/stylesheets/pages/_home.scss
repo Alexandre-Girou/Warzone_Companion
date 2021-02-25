@@ -2,13 +2,14 @@
 
 .big-container {
   min-height: calc(100vh - 90px);
+  padding-bottom: 90px;
 }
 
 .intro {
   display: flex;
   align-content: center;
   .img-intro {
-    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.3) 70.71%), url("intro_back.png");
+    background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.3) 70.71%), asset_url("intro_back.png");
     height: 170px;
     width: 100%;
     background-position: center;
