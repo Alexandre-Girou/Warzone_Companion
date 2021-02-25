@@ -21,21 +21,22 @@
   text-shadow: 0px 0px 0px #97cde1;
   background-color: transparent;
   background-color: #080127;
-  color: #94bbc2;
-  box-shadow: 0px 0px 25px #79d9ff;
-  border: 2px solid #79d9ff;
+  color: #7d9fa5;
+  border: 2px solid #23282b;
   min-width: 162px;
   display: block;
   min-width: 150px;
   max-width: 200px;
   text-align: center;
-  border-color: 0px 0px 10px #79d9ff;
+  border-color: 0px 0px 10px #23282b;
   border-radius: 3px;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: slidein;
   text-decoration: none;
-  font-family: 'DotGothic16', sans-serif;
+  background-image: asset_url("Dot.png");
+  box-shadow: inset 0 0 1em black, 0 0 1em black;
+  box-shadow: 0px 0px 25px #7d9fa5;
 }
 
 .btn-index:hover {
@@ -50,19 +51,19 @@
 @keyframes slidein {
   from {
     background-color: #080127;
-    text-shadow: 0px 0px 0px #97cde1;
-    color: #94bbc2;
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5;
   }
 
   50% {
     background-color: #080127;
-    text-shadow: 0px 0px 10px #79d9ff;
-    color: #79d9ff;
+    text-shadow: 0px 0px 10px #4c5c5f;
+    color: #7d9fa5;
   }
 
   to {
     background-color: #080127;
-    text-shadow: 0px 0px 0px #97cde1;
-    color: #94bbc2; 
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5; 
   }
 }
