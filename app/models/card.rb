@@ -6,13 +6,26 @@ class Card < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :decks, through: :favorites
 
-  scope :category, -> (category) { Card.where(category: category) }
-  scope :level, -> (level) { Card.where(level: level) }
+  scope :category, ->(category) { Card.where(category: category) }
+  scope :level, ->(level) { Card.where(level: level) }
+
+  validates :title, presence: true
+  validates :category, presence: true
+  validates :content, presence: true
+  validate :level_if_tricks
+  validate :text_content
 
   include PgSearch::Model
-  pg_search_scope :search_by_word,
-    against: [ :title, :content, :category, :level ],
-    using: {
-      tsearch: { prefix: true }
-  }
+  pg_search_scope :search_by_word, against: %i[title content category level], using:
+      { tsearch:
+        { prefix:
+          true } }
+
+  def level_if_tricks
+    errors.add(:level, "Should not be empty") if category == "Tricks" && level.blank?
+  end
+
+  def text_content
+    errors.add(:content, "Should be longer!") if content.body.to_plain_text.length < 42
+  end
 end
