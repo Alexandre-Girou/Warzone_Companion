@@ -4,7 +4,11 @@ const handleForm = () => {
     const value = event.target.value;
     if(value === "Tricks") {
       const lvl = document.querySelector("#level");
-      lvl.classList.remove("hidden")   
+      lvl.classList.remove("hidden")
+    }
+    if(value === "Weapons") {
+      const lvl = document.querySelector("#level");
+      lvl.classList.add("hidden")
     }
   })
 }
