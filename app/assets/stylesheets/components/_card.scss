@@ -1,3 +1,5 @@
+// INDEX CARDS STYLES
+
 a.btn {
   background: black;
   background-image: asset_url("Dot.png");
@@ -85,6 +87,7 @@ div.card {
       margin: 0;
       padding: 0;
       color: black;
+      text-align: left;
     }
   }
 
@@ -98,5 +101,33 @@ div.card {
   	box-shadow: 0 2px 0px 0 rgba(0,0,0,0.075);
     padding: 10px 15px 20px;
     text-align: center;
+  }
+}
+
+// CARD SHOW STYLES
+.show-card {
+  h2 {
+    text-align: center !important;
+  }
+  p {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+  }
+  .level-category {
+    text-align: center;
+  }
+  i {
+    font-size: 35px;
+    margin-right: 70px;
+  }
+  #ak-icon {
+    width: 35px;
+    height: 35px;
+  }
+  #stars {
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
   }
 }

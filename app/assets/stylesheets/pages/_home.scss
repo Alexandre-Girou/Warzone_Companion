@@ -25,6 +25,10 @@
     float: left;
     justify-content: space-around;
   }
+  h2 {
+    margin-left: 10px;
+    text-align: center;
+  }
   .text-intro {
     font-size: 13px;
     padding-top: 18px;
@@ -36,11 +40,8 @@
   }
 }
 
-h2 {
-  margin-left: 10px;
-}
-
-h1 {
-  text-align: center;
+  h1 {
+    text-align: center;
+  }
 }
 
