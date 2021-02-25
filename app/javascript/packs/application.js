@@ -30,9 +30,11 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { handleForm } from "../forms/form.js"
+import { showCardDetails } from "../cards/card.js"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   handleForm()
+  showCardDetails()
   // initSelect2();
 });
