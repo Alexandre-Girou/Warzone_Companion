@@ -39,3 +39,15 @@
   margin: auto;
 }
 
+#menu-profile {
+  background-image: asset_url("Dot.png");
+  background-color: black;
+}
+
+.dropdown-item {
+  color: white;
+}
+
+div.nav-item.dropdown.show {
+  background: none;
+}
