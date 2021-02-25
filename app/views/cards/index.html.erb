@@ -1,7 +1,10 @@
-<h1>All tips</h1>
-
-<ul>
-  <% @cards.each do |card| %>
-    <li>Name : <%= card.title %></li>
-  <% end %>
-</ul>
+<div>
+  <h1>All tips</h1>
+</div>
+<div class="create-card-container">
+  <div class="form-border">
+    <% @cards.each do |card| %>
+      <div class=""><%= link_to "#{card.title}", card_path(card.id), class: "" %></div>
+    <% end %>
+  </div>
+</div>
