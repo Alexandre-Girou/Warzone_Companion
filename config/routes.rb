@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
+  get "/profile", to: 'pages#profile'
+  
   root to: 'pages#home'
   resources :cards do
     resources :favorites, only: [:create]
