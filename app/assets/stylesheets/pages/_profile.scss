@@ -1,0 +1,28 @@
+#user-avatar {
+  border-radius: 50%;
+  border: solid 1px;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  margin: 20px 20px;
+}
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid $tan;
+  border-radius: 15px;
+  background-color: rgba(154, 129, 72, 0.4);
+  width: 300px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+}
+
+h1 {
+  text-shadow: 4px 4px 15px black;
+}
