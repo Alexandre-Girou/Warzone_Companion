@@ -10,7 +10,7 @@
   align-content: center;
   .img-intro {
     background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,0.3) 70.71%), asset_url("intro_back.png");
-    height: 170px;
+    height: 200px;
     width: 100%;
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,1);
@@ -22,13 +22,11 @@
     background-size: cover;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
     margin: auto;
-    margin: 15px;
+    margin: 0px;
+    margin-bottom: 30px;
     float: left;
     justify-content: space-around;
-  }
-  h2 {
-    margin-left: 10px;
-    text-align: center;
+    padding: 5px;
   }
   .text-intro {
     font-size: 13px;
