@@ -31,10 +31,12 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { handleForm } from "../forms/form.js"
 import { showCardDetails } from "../cards/card.js"
+import { showIndexDetails } from "../cards/cardsIndex.js"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   handleForm()
   showCardDetails()
+  showIndexDetails()
   // initSelect2();
 });

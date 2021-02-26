@@ -1,6 +1,6 @@
 // INDEX CARDS STYLES
 
-a.btn {
+.details {
   background: black;
   background-image: asset_url("Dot.png");
   box-shadow: inset 0 0 1em black, 0 0 1em black;
@@ -52,7 +52,7 @@ div.card {
     border-bottom: solid 2px;
     margin-bottom: 5px;
     
-    a.toggle-info {
+    .toggle-info {
       border-radius: 32px;
       height: 32px;
       padding: 0;
