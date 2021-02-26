@@ -28,8 +28,8 @@
     margin-right: 55px;
     font-size: 60px;
     margin-left: 55px;
-    color: black;
-    opacity: 0.8;
+    color: grey;
+    opacity: 0.7;
     margin-top: 9px;
   }
 }
@@ -50,4 +50,74 @@
 
 div.nav-item.dropdown.show {
   background: none;
+}
+
+.modal-content {
+  background-image: asset_url("Dot.png");
+  color: white;
+}
+
+.close {
+  color: white;
+}
+
+.btn-primary {
+  min-height: 16px;
+  padding: 12px 20px;
+  transition-property: text-shadow, background-color, border, color;
+  transition-duration: 1s;
+  position: relative;
+  background-color: #282828;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #81898c;
+  line-height: 1.15;
+  text-transform: uppercase;
+  width: fit-content;
+  background-size: 2px;
+  border: 1px solid #81898c;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0px 0px 0px #97cde1;
+  background-color: transparent;
+  background-color: #080127;
+  color: #7d9fa5;
+  border: 2px solid #23282b;
+  min-width: 162px;
+  display: block;
+  min-width: 150px;
+  max-width: 200px;
+  text-align: center;
+  border-color: 0px 0px 10px #23282b;
+  border-radius: 3px;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
+  text-decoration: none;
+  background-image: asset_url("Dot.png");
+  box-shadow: inset 0 0 1em black, 0 0 1em black;
+  box-shadow: 0px 0px 25px #7d9fa5;
+  margin-top: 20px;
+}
+
+@keyframes slidein {
+  from {
+    background-color: #080127;
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5;
+  }
+
+  50% {
+    background-color: #080127;
+    text-shadow: 0px 0px 10px #4c5c5f;
+    color: #7d9fa5;
+  }
+
+  to {
+    background-color: #080127;
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5; 
+  }
 }
