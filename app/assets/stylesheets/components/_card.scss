@@ -21,7 +21,7 @@ div.cards {
 }
 
 div.card {
-  background-color: rgba($color: $tan, $alpha: 0.5);
+  background-color: rgba($color: $tan, $alpha: 0.8);
   display: inline-block;
   margin: 8px;
   max-width: 300px;
@@ -116,14 +116,21 @@ div.card {
   }
   .level-category {
     text-align: center;
+    display: flex;
+    margin-left: 12px;
+    h4 {
+      margin-bottom: 0 !important;
+      margin-top: 5px;
+    }
   }
   i {
     font-size: 35px;
-    margin-right: 70px;
+    margin-right: auto;
   }
   #ak-icon {
     width: 35px;
     height: 35px;
+    margin: auto;
   }
   #stars {
     width: 35px;
