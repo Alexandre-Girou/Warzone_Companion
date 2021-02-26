@@ -31,9 +31,8 @@
           <%= @card.content %>
         </div>
         <div class="card-actions">
-          <a href="#" class="btn">View More</a>
+          <%= link_to "View More", card_path(@card.id), class: "details" %>
         </div>
     </div>
   </div>
 </div>
-  <p><strong>Tip Name</strong></p> <%#CONTAINER DES CARTES (ET NON PAS CARD CONTAINER VOUS L'AVEZ?)%>

@@ -1,5 +1,5 @@
 class CardsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home index]
+  skip_before_action :authenticate_user!, only: %i[home index show]
   def index
     @cards = Card.all
 
