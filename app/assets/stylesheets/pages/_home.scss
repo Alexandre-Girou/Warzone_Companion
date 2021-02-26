@@ -21,7 +21,8 @@
     color: white;
     background-size: cover;
     box-shadow: 0 0 15px rgba(0,0,0,0.3);
-    margin: 35px;
+    margin: auto;
+    margin: 15px;
     float: left;
     justify-content: space-around;
   }
@@ -40,6 +41,6 @@
   }
 }
 
-h1 {
+h1, h3, h4 {
   text-align: center;
 }
