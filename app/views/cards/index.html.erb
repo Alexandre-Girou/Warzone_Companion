@@ -1,10 +1,29 @@
 <div>
   <h1>All tips</h1>
 </div>
-<div class="create-card-container">
-  <div class="form-border">
+<div class="cards">
+  <div class="card">
     <% @cards.each do |card| %>
-      <div class=""><%= link_to "#{card.title}", card_path(card.id), class: "" %></div>
+      <div class="card-selector">
+        <div class="card-title">
+          <div class="toggle-info details">
+            <span class="left"></span>
+            <span class="right"></span>
+          </div>
+        <h2><%= card.title %></h2>
+        </div>
+        <div class="hid-content hidden">
+          <div class="card_image-holder">
+            <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+          </div>
+          <div class="card-description">
+            <%= card.content %>
+          </div>
+          <div class="card-actions">
+            <%= link_to "View More", card_path(card.id), class: "btn" %>
+          </div>
+        </div>
+      </div>
     <% end %>
   </div>
 </div>

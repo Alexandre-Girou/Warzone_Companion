@@ -1,15 +1,10 @@
 class CardsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: %i[home index]
   def index
     @cards = Card.all
 
-    if params[:category].present?
-      @cards = @cards.category(params[:category])
-    end
-
-    if params[:level].present?
-      @cards = @cards.level(params[:level])
-    end
+    @cards = @cards.category(params[:category]) if params[:category].present?
+    @cards = @cards.level(params[:level]) if params[:level].present?
   end
 
   def new
