@@ -13,4 +13,10 @@ class FavoritesController < ApplicationController
 
     @favorite.save ? (redirect_to @card) : (render @card, flash[:alert] = "Something went wrong")
   end
+
+  def destroy
+    @favorite = Favorite.find(params[:id])
+    @favorite.destroy ? (flash[:notice] = 'Removed from favorites.') : (flash[:alert] = 'Something went wrong')
+    redirect_to "home"
+  end
 end

@@ -10,10 +10,10 @@ class DecksController < ApplicationController
   def create
     @deck = Deck.new(deck_params)
     if @decks.save
-      flash[:success] = "Object successfully created"
+      flash[:notice] = "Successfully added!"
       redirect_to @deck
     else
-      flash[:error] = "Something went wrong"
+      flash[:alert] = "Something went wrong"
       render 'new'
     end
   end
