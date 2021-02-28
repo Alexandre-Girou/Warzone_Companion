@@ -1,4 +1,3 @@
-
 <div class="profile-card">
   <h1><%= @user.username %></h1>
   <%= image_tag "avatar_user.png", id: "user-avatar" %>
@@ -6,3 +5,5 @@
 </div>
 
 <h2>Favorite cards :</h2>
+
+<%= render 'decks/list' %>
