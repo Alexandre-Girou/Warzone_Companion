@@ -39,3 +39,22 @@
     </div>
 </div>
 </div>
+
+<h2>Comments :</h2>
+
+<div class="display-comments">
+  <% @card.comments.each do |comment| %>
+    <p><%= comment.creator.username %> : <%= comment.content %></p>
+  <% end %>
+</div>
+
+<h2>Add a comment :</h2>
+
+<div class="create-card-container">
+  <div class="form-border">
+    <%= simple_form_for([@card, @comment], method: :post) do |f| %>
+      <%= f.input :content, as: :rich_text_area, label: false %>
+      <%= f.submit class: "btn-index" %>
+    <% end %>
+  </div>
+</div>
