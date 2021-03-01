@@ -4,7 +4,7 @@
     <i class="fas fa-search filter-menu" data-toggle="modal" data-target="#exampleModal"></i>
     <% if current_user %>
         <div class="nav-item dropdown">
-          <%= image_tag "avatar_user.png", class: "user-avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo.key, class: "user-avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="menu-profile">
             <%= link_to "Dashboard", profile_path, class: "dropdown-item" %>
             <%= link_to "Create a card", new_card_path, class: "dropdown-item" %>
