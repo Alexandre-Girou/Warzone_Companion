@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :cards do
     resources :favorites, only: [:create]
     resources :comments, only: [:create, :update]
+    resources :votes, only: [:create, :destroy]
   end
   resources :comments, only: :destroy
   resources :favorites, only: :destroy
