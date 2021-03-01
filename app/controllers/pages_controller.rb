@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   def profile
     @user = current_user
     @decks = @user.decks
+    @deck = Deck.new
   end
 end
