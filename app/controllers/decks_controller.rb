@@ -9,13 +9,13 @@ class DecksController < ApplicationController
 
   def create
     @deck = Deck.new(deck_params)
-    if @decks.save
+    @deck.user = current_user
+    if @deck.save
       flash[:notice] = "Successfully added!"
-      redirect_to @deck
     else
       flash[:alert] = "Something went wrong"
-      render 'new'
     end
+    redirect_to profile_path
   end
 
   def show
