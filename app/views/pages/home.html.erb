@@ -3,8 +3,8 @@
 <div class="intro">
   <div class="img-intro">
     <div class="text-intro">
-      <p>Salut soldat, ici tu peux progresser deux fois plus vite que tes amis !</p>
-      <p>Découvre des tips et des loadouts selon ton niveau actuel et partage les tiens !</p>
+      <p>Hello soldier, here you can improve two times faster than your friends !</p>
+      <p>Discover tips and loadouts according to your current level and share your experience with the world !</p>
     </div>
   </div>    
 </div>
@@ -25,7 +25,7 @@
     </div>
     <div class="hidden-content hidden">
       <div class="card_image-holder">
-        <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+        <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
       </div>
         <div class="card-description">
           <%= @card.content %>

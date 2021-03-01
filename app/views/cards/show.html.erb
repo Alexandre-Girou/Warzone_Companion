@@ -9,7 +9,7 @@
           <% if @card.category == "Weapons" %>
             <img id="ak-icon" src="https://img.icons8.com/ios-filled/50/000000/assault-rifle.png"/>
           <% else %>
-          <i class="fas fa-book"></i>
+            <i class="fas fa-book"></i>
           <% end %>
           <% if @card.level == "Beginner" %>
             <h4>Level : </h4>
@@ -17,17 +17,27 @@
           <% elsif @card.level == "Intermediate" %>
             <h4>Level : </h4>
             <% 2.times do %>
-            <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
           <% elsif @card.level == "Confirmed" %>
             <h4>Level : </h4>
             <% 3.times do %>
-            <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
           <% end %>
         </div>
+
+        <%= form_tag card_favorites_path(@card), method: :post do %>
+          <%= select_tag :name,
+            options_for_select(Deck.all.pluck(:name)),
+            class: "form-control",
+            prompt: "Select a deck to put this card in:"
+          %>
+          <%= submit_tag "Add to", class: "btn btn-primary" %>
+        <% end %>
+
         <div class="card_image-holder">
-          <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+          <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
         </div>
         <div class="card-description">
           <%= @card.content %>
@@ -45,4 +55,23 @@
       </div>
     </div>
 </div>
+</div>
+
+<h2>Comments :</h2>
+
+<div class="display-comments">
+  <% @card.comments.each do |comment| %>
+    <p><%= comment.creator.username %> : <%= comment.content %></p>
+  <% end %>
+</div>
+
+<h2>Add a comment :</h2>
+
+<div class="create-card-container">
+  <div class="form-border">
+    <%= simple_form_for([@card, @comment], method: :post) do |f| %>
+      <%= f.input :content, as: :rich_text_area, label: false %>
+      <%= f.submit class: "btn-index" %>
+    <% end %>
+  </div>
 </div>

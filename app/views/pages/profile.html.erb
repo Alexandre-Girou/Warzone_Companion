@@ -1,8 +1,11 @@
-
 <div class="profile-card">
   <h1><%= @user.username %></h1>
-  <%= image_tag "avatar_user.png", id: "user-avatar" %>
+  <div>
+    <%= cl_image_tag @user.photo.key, id: "user-avatar" %>
+  </div>
   <p>Member since: <%= @user.created_at.strftime("%d/%m/%Y") %></p>
 </div>
 
 <h2>Favorite cards :</h2>
+
+<%= render 'decks/list' %>

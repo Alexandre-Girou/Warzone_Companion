@@ -4,6 +4,7 @@
       <%= f.input :title %>
       <%= f.input :category, collection: ["Tricks", "Weapons"], input_html: { id: "category" } %>   
       <%= f.input :level, collection: ["Beginner", "Intermediate", "Confirmed"], wrapper_html: { class: 'hidden', id: "level" } %>
+      <%= f.input :photo, as: :file %>
       <%= f.input :content, as: :rich_text_area, class: "form-control" %>
         <div class="button-index">
           <%= f.submit "Submit", class: "btn-index" %>

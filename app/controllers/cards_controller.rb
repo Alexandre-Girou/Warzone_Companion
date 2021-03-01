@@ -24,11 +24,13 @@ class CardsController < ApplicationController
 
   def show
     @card = Card.find(params[:id])
+    @comment = Comment.new
+    @comments = @card.comments
   end
 
   private
 
   def card_params
-    params.require(:card).permit(:title, :content, :category, :level)
+    params.require(:card).permit(:title, :content, :category, :level, :photo)
   end
 end

@@ -1,27 +1,23 @@
 <div>
-  <h1>All tips</h1>
+  <h1>My decks</h1>
 </div>
 <div class="cards">
   <div class="card">
-    <% @cards.each do |card| %>
+    <% @decks.each do |deck| %>
       <div class="card-selector">
         <div class="card-title">
           <div class="toggle-info details">
             <span class="left"></span>
             <span class="right"></span>
           </div>
-        <h2><%= card.title %></h2>
+        <h2><%= deck.name %></h2>
         </div>
         <div class="hid-content hidden">
-          <div class="card_image-holder">
-            <%= cl_image_tag card.photo.key, max_width: 400, crop: :fill %>
-          </div>
           <div class="card-description">
-            <%= card.content %>
-
+            <% deck.cards %>
           </div>
           <div class="card-actions">
-            <%= link_to "View More", card_path(card.id), class: "details" %>
+            <%= link_to "See More", deck_path(deck.id), class: "details" %>
           </div>
         </div>
       </div>
