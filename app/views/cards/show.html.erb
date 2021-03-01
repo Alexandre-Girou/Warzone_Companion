@@ -9,7 +9,7 @@
           <% if @card.category == "Weapons" %>
             <img id="ak-icon" src="https://img.icons8.com/ios-filled/50/000000/assault-rifle.png"/>
           <% else %>
-          <i class="fas fa-book"></i>
+            <i class="fas fa-book"></i>
           <% end %>
           <% if @card.level == "Beginner" %>
             <h4>Level : </h4>
@@ -17,15 +17,25 @@
           <% elsif @card.level == "Intermediate" %>
             <h4>Level : </h4>
             <% 2.times do %>
-            <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
           <% elsif @card.level == "Confirmed" %>
             <h4>Level : </h4>
             <% 3.times do %>
-            <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
           <% end %>
         </div>
+
+        <%= form_tag card_favorites_path(@card), method: :post do %>
+          <%= select_tag :name,
+            options_for_select(Deck.all.pluck(:name)),
+            class: "form-control",
+            prompt: "Select a deck to put this card in:"
+          %>
+          <%= submit_tag "Add to", class: "btn btn-primary" %>
+        <% end %>
+
         <div class="card_image-holder">
           <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
         </div>

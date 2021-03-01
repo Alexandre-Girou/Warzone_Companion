@@ -8,6 +8,7 @@
 Comment.destroy_all
 Card.destroy_all
 User.destroy_all
+Deck.destroy_all
 
 puts "Creating Users..."
 
@@ -134,3 +135,5 @@ comment_2 = Comment.create!(content: lorem, creator: users.sample, card: cards.s
 comment_3 = Comment.create!(content: lorem, creator: users.sample, card: cards.sample)
 comment_4 = Comment.create!(content: lorem, creator: users.sample, card: cards.sample)
 comment_5 = Comment.create!(content: lorem, creator: users.sample, card: cards.sample)
+
+deck_1 = Deck.create!(name: "Favorites", user: user_1)
