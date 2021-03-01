@@ -40,3 +40,4 @@ document.addEventListener('turbolinks:load', () => {
   showIndexDetails()
   // initSelect2();
 });
+import "controllers"

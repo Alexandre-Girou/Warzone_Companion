@@ -7,6 +7,7 @@ class Card < ApplicationRecord
 
   has_many :favorites, dependent: :destroy
   has_many :decks, through: :favorites
+  has_many :votes, dependent: :destroy
   has_many :comments
 
   scope :category, ->(category) { Card.where(category: category) }

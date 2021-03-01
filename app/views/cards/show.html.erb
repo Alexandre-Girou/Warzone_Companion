@@ -42,6 +42,13 @@
         <div class="card-description">
           <%= @card.content %>
         </div>
+        <div class="votes" data-controller="votes" data-votes-card-id-value="<%= @card.id %>">
+          <i class="fas fa-angle-double-up" data-action="click->votes#upvote"></i>
+         <div class="upvotes-counter" data-votes-target="upcounter">
+          <%= @card.votes.where(status: 'upvote').count %>         
+         </div>
+          <i class="fas fa-angle-double-down"></i>
+        </div>
         <div>
           <p>Creator : <%= @card.creator.username %> </p>
         </div>
