@@ -3,8 +3,11 @@ class Card < ApplicationRecord
 
   has_rich_text :content
 
+  has_one_attached :photo
+
   has_many :favorites, dependent: :destroy
   has_many :decks, through: :favorites
+  has_many :comments
 
   scope :category, ->(category) { Card.where(category: category) }
   scope :level, ->(level) { Card.where(level: level) }

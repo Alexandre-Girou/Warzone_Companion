@@ -37,7 +37,7 @@
         <% end %>
 
         <div class="card_image-holder">
-          <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+          <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
         </div>
         <div class="card-description">
           <%= @card.content %>
@@ -48,4 +48,23 @@
       </div>
     </div>
 </div>
+</div>
+
+<h2>Comments :</h2>
+
+<div class="display-comments">
+  <% @card.comments.each do |comment| %>
+    <p><%= comment.creator.username %> : <%= comment.content %></p>
+  <% end %>
+</div>
+
+<h2>Add a comment :</h2>
+
+<div class="create-card-container">
+  <div class="form-border">
+    <%= simple_form_for([@card, @comment], method: :post) do |f| %>
+      <%= f.input :content, as: :rich_text_area, label: false %>
+      <%= f.submit class: "btn-index" %>
+    <% end %>
+  </div>
 </div>

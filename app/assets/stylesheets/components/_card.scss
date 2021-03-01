@@ -24,23 +24,25 @@ div.card {
   background-color: rgba($color: $tan, $alpha: 0.8);
   display: inline-block;
   margin: 8px;
-  max-width: 300px;
+  max-width: 400px;
   perspective: 1000;
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
-  width: 300px;
+  width: 400px;
   z-index: 500;
   border-radius: 10px;
+  border: solid 1px;
 
   img {
-    max-width: 300px;
+    width: 100%;
     padding: 5px;
   }
   
   .card_image-holder {
     height: 0;
     padding-bottom: 60%;
+    margin-bottom: 20px;
   }
 
   div.card-title {
@@ -81,9 +83,9 @@ div.card {
     }
     
     h2 {
-      font-size: 24px;
+      font-size: 18px;
       font-weight: 700;
-      letter-spacing: -0.10em;
+      letter-spacing: 0em;
       margin: 0;
       padding: 0;
       color: black;
@@ -102,6 +104,10 @@ div.card {
     padding: 10px 15px 20px;
     text-align: center;
   }
+}
+
+.card-selector {
+  margin: 15px;
 }
 
 // CARD SHOW STYLES
