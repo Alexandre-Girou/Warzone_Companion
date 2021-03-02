@@ -33,12 +33,14 @@ import { handleForm } from "../forms/form.js"
 import { showCardDetails } from "../cards/card.js"
 import { showIndexDetails } from "../cards/cardsIndex.js"
 import { deckDestroyer } from "../decks/deckDestroyer.js"
+import { ellipsifyInit } from "../cards/cardsContent.js"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   handleForm()
   showCardDetails()
   showIndexDetails()
+  ellipsifyInit()
   // deckDestroyer()
   // initSelect2();
 });

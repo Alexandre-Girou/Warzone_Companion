@@ -27,7 +27,7 @@
       <div class="card_image-holder">
         <%= cl_image_tag @trick.photo.key, max_width: 400, crop: :fill %>
       </div>
-        <div class="card-description">
+        <div class="card-description target">
           <%= @trick.content %>
         </div>
         <div class="card-actions">
@@ -51,7 +51,7 @@
       <div class="card_image-holder">
         <%= cl_image_tag @weapon.photo.key, max_width: 400, crop: :fill %>
       </div>
-        <div class="card-description">
+        <div class="card-description target">
           <%= @weapon.content %>
         </div>
         <div class="card-actions">
