@@ -81,6 +81,34 @@ div.card {
         transform: rotate(-45deg);
       }
     }
+
+    .delete-btn {
+      border-radius: 32px;
+      height: 32px;
+      padding: 0;
+      position: absolute;
+      right: 75px;
+      top: 12px;
+      width: 32px;
+      
+      span {
+        background: red;
+        display: block;
+        height: 2px;
+        position: absolute;
+        top: 14px;
+        width: 12px;
+      }
+      
+      span.left {
+        right: 9px;
+        transform: rotate(45deg);
+      }
+      span.right {
+        left: 9px;
+        transform: rotate(-45deg);
+      }
+    }
     
     h2 {
       font-size: 18px;
