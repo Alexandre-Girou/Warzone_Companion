@@ -32,12 +32,14 @@ import "bootstrap";
 import { handleForm } from "../forms/form.js"
 import { showCardDetails } from "../cards/card.js"
 import { showIndexDetails } from "../cards/cardsIndex.js"
+import { deckDestroyer } from "../decks/deckDestroyer.js"
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   handleForm()
   showCardDetails()
   showIndexDetails()
+  // deckDestroyer()
   // initSelect2();
 });
 import "controllers"
