@@ -11,12 +11,13 @@ class FavoritesController < ApplicationController
     @deck = Deck.find_by(name: params[:name])
     @favorite.deck = @deck
 
-    @favorite.save ? (redirect_to @card, flash[:notice] = "Added to #{@deck.name}!") : (render @card, flash[:alert] = "Something went wrong")
+    @favorite.save ? "Added to #{@deck.name}!" : "Something went wrong"
+    redirect_to profile_path
   end
 
   def destroy
     @favorite = Favorite.find(params[:id])
     @favorite.destroy ? (flash[:notice] = 'Removed from favorites.') : (flash[:alert] = 'Something went wrong')
-    render "home"
+    redirect_to deck_path(@favorite.deck)
   end
 end

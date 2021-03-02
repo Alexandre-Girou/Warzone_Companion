@@ -10,6 +10,13 @@
             <span class="left"></span>
             <span class="right"></span>
           </div>
+          <% favorite = Favorite.find_by(deck: @deck, card: card) %>
+          <%= link_to favorite_path(favorite), method: :delete, remote: true, data: { confirm: "Are you sure ?"} do %>
+            <div class="delete-btn details" id="<%= card.favorites %>">
+              <span class="left"></span>
+              <span class="right"></span>
+            </div>
+          <% end %>
         <h2><%= card.title %></h2>
         </div>
         <div class="hid-content hidden">
