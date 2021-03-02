@@ -29,4 +29,12 @@ class Card < ApplicationRecord
   def text_content
     errors.add(:content, "Should be longer!") if content.body.to_plain_text.length < 42
   end
+
+  def upvotes
+    votes.where(status: 'upvote').size
+  end
+
+  def downvotes
+    votes.where(status: 'downvote').size
+  end
 end
