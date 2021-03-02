@@ -16,14 +16,14 @@
               <span class="right"></span>
             </div>
           <% end %>
-        <h2><%= deck.name %></h2>
+        <h2><%= deck.name %> (<%= deck.cards.count %> cards)</h2>
         </div>
         <div class="hid-content hidden">
           <div class="card-description">
             <% deck.cards %>
           </div>
           <div class="card-actions">
-            <%= link_to "Open deck", deck_path(deck.id), class: "details" %>
+            <%= link_to "Open Deck", deck_path(deck.id), class: "details" %>
           </div>
         </div>
       </div>
