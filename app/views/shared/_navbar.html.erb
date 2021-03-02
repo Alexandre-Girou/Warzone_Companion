@@ -1,10 +1,14 @@
 <div class="nav-bar">
   <div class="user-nav">
-    <%= link_to (image_tag "ghost_logo.png", class: "home-logo"), root_path %>
+    <div class="home-btn">
+      <%= link_to (image_tag "ghost_logo.png", class: "home-logo"), root_path %>
+      <small>home</small>
+    </div>
     <i class="fas fa-search filter-menu" data-toggle="modal" data-target="#exampleModal"></i>
     <% if current_user %>
-        <div class="nav-item dropdown">
+        <div class="nav-item dropdown home-btn">
           <%= cl_image_tag current_user.photo.key, class: "user-avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <small>menu</small>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown" id="menu-profile">
             <%= link_to "Dashboard", profile_path, class: "dropdown-item" %>
             <%= link_to "Create a card", new_card_path, class: "dropdown-item" %>
@@ -12,12 +16,16 @@
           </div>
         </div>
     <% else %>
-      <div class="button-signin">
-        <%= link_to "Sign\nIn", new_user_session_path, class: 'btn-signin' %>
+      <div class="home-btn">
+        <div class="button-signin">
+          <%= link_to "Sign\nIn", new_user_session_path, class: 'btn-signin' %>
+        </div>
+        <small>sign in</small>
       </div>
     <% end %>
   </div>
 </div>
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
