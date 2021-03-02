@@ -28,6 +28,12 @@ class CardsController < ApplicationController
     @comments = @card.comments
   end
 
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy ? "card deleted." : "Something went wrong."
+    redirect_to profile_path
+  end
+
   private
 
   def card_params

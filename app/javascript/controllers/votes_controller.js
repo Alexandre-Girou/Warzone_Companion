@@ -1,10 +1,8 @@
 import { Controller } from "stimulus"
 import { fetchWithToken } from "../utils/fetch_with_token"
-
 export default class extends Controller {
   static values = { cardId: String };
   static targets = [ "upcounter", "downcounter" ];
-
   upvote() {
     fetchWithToken(`/cards/${this.cardIdValue}/votes`, { 
       method: "POST", 
@@ -49,8 +47,7 @@ export default class extends Controller {
           this.downcounterTarget.insertAdjacentHTML("beforeend", data.votes);
           this.colordownvote();
           if (document.querySelector('.upvoted')) {
-            document.querySelector('.upvoted').classList.remove('upvoted')
-            // document.querySelector('.upvotes-counter').decrementUpvotes
+            document.querySelector('.upvoted').classList.remove('upvoted');
             let votenum = document.querySelector('.upvotes-counter');
             if (!votenum) return;
             votenum.innerHTML = data.upvotes;

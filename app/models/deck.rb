@@ -2,7 +2,7 @@ class Deck < ApplicationRecord
   belongs_to :user
   has_many :favorites, dependent: :destroy
   has_many :cards, through: :favorites
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
 
 # has_many :cards, through: :favorites
