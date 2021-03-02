@@ -21,7 +21,12 @@ export default class extends Controller {
           if (document.querySelector('.downvoted')) {
             document.querySelector('.downvoted').classList.remove('downvoted')
             // document.querySelector('.downvotes-counter').decrementDownvotes
-            this.decrementUpvotes();
+            let votenum = document.querySelector('.upvotes-counter');
+            if (!votenum) return;
+            votenum.innerHTML = data.upvotes;
+            votenum = document.querySelector('.downvotes-counter');
+            if (!votenum) return;
+            votenum.innerHTML = data.downvotes;
           };
         };
       });
@@ -42,9 +47,13 @@ export default class extends Controller {
           this.downcounterTarget.insertAdjacentHTML("beforeend", data.votes);
           this.colordownvote();
           if (document.querySelector('.upvoted')) {
-            document.querySelector('.upvoted').classList.remove('upvoted')
-            // document.querySelector('.upvotes-counter').decrementUpvotes
-            this.decrementUpvotes();
+            document.querySelector('.upvoted').classList.remove('upvoted');
+            let votenum = document.querySelector('.upvotes-counter');
+            if (!votenum) return;
+            votenum.innerHTML = data.upvotes;
+            votenum = document.querySelector('.downvotes-counter');
+            if (!votenum) return;
+            votenum.innerHTML = data.downvotes;
           }
         };
       });

@@ -9,5 +9,16 @@ class User < ApplicationRecord
   has_one_attached :photo
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_one_attached :photo
+  devise :database_authenticatable, :registerable,
+        :recoverable, :rememberable, :validatable
   validates :username, presence: true
+
+  def upvoted?(card)
+    votes.select { |vote| vote.status == 'upvote' }.map(&:card_id).include?(card.id)
+  end
+
+  def downvoted?(card)
+    votes.select { |vote| vote.status == 'downvote' }.map(&:card_id).include?(card.id)
+  end
 end

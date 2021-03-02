@@ -5,10 +5,11 @@ class VotesController < ApplicationController
     @card = Card.find(params[:card_id])
     @vote.card = @card
     @vote.user = current_user
-    if @vote.save
+    @card.votes.find_by(user_id: current_user.id).destroy if @card.votes.find_by(user_id: current_user.id).present?
+    if @vote.save!
       respond_to do |format|
         format.html { redirect_to @card }
-        format.json { render json: { status: "succeed", votes: @card.votes.where(status: 'upvote').count }}
+        format.json { render json: { status: "succeed", votes: @card.votes.where(status: @vote.status).count, voted: @vote.status, upvotes: @card.upvotes, downvotes: @card.downvotes }}
       end
     else
       respond_to do |format|
@@ -17,6 +18,7 @@ class VotesController < ApplicationController
       end
     end
   end
+
 
   def destroy
     @vote = Vote.find(params[:card_id])
