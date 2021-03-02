@@ -16,9 +16,8 @@
           <div class="card_image-holder">
             <%= cl_image_tag card.photo.key, max_width: 400, crop: :fill %>
           </div>
-          <div class="card-description">
+          <div class="card-description target">
             <%= card.content %>
-
           </div>
           <div class="card-actions">
             <%= link_to "View More", card_path(card.id), class: "details" %>
