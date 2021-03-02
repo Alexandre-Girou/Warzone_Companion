@@ -7,3 +7,15 @@
   margin: auto;
   box-sizing: content-box;
 }
+
+.display-comments {
+  background-color: rgba(154, 129, 72, 0.8);
+  border-radius: 3px;
+  border-color: #79BEDA;
+  border: solid 2 $tan;
+  justify-content: center;
+  box-sizing: content-box;
+  text-align: center;
+  width: 400px;
+  margin: auto;
+}
