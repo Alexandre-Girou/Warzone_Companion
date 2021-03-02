@@ -9,18 +9,21 @@ class DecksController < ApplicationController
 
   def create
     @deck = Deck.new(deck_params)
-    if @decks.save
-      flash[:notice] = "Successfully added!"
-      redirect_to @deck
-    else
-      flash[:alert] = "Something went wrong"
-      render 'new'
-    end
+    @deck.user = current_user
+
+    @deck.save ? (flash[:notice] = "Successfully added!") : (flash[:alert] = "Something went wrong")
+    redirect_to profile_path
   end
 
   def show
     @deck = Deck.find(params[:id])
     @cards = @deck.cards
+  end
+
+  def destroy
+    @deck = Deck.find(params[:id])
+    response = @deck.destroy ? "Deck deleted." : "Something went wrong."
+    redirect_to profile_path
   end
 
   private

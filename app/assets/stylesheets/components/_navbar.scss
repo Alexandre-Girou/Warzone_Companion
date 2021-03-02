@@ -16,13 +16,13 @@
     border-radius: 50%;
     border: solid 1px;
     vertical-align: middle;
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
   }
   .home-logo {
     vertical-align: middle;
-    width: 75px;
-    height: 75px;
+    width: 70px;
+    height: 70px;
   }
   i {
     margin-right: 55px;
@@ -119,5 +119,18 @@ div.nav-item.dropdown.show {
     background-color: #080127;
     text-shadow: 0px 0px 0px #4c5c5f;
     color: #7d9fa5; 
+  }
+}
+
+.home-btn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+  small {
+    text-decoration: none;
+    color: grey;
+    text-align: center;
+    font-family: 'Black Ops One', cursive;
+    margin-bottom: 5px;
   }
 }
