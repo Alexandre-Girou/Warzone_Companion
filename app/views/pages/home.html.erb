@@ -21,17 +21,41 @@
         <span class="left"></span>
         <span class="right"></span>
       </div>
-      <h2><%= @card.title %></h2>
+      <h2><%= @trick.title %></h2>
     </div>
     <div class="hidden-content hidden">
       <div class="card_image-holder">
-        <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
+        <%= cl_image_tag @trick.photo.key, max_width: 400, crop: :fill %>
       </div>
         <div class="card-description">
-          <%= @card.content %>
+          <%= @trick.content %>
         </div>
         <div class="card-actions">
-          <%= link_to "View More", card_path(@card.id), class: "details" %>
+          <%= link_to "View More", card_path(@trick.id), class: "details" %>
+        </div>
+    </div>
+  </div>
+</div>
+
+<h3>Latest weapon</h3>
+<div class="cards">
+  <div class="card">
+    <div class="card-title">
+      <div class="toggle-info details" id="card-details">
+        <span class="left"></span>
+        <span class="right"></span>
+      </div>
+      <h2><%= @weapon.title %></h2>
+    </div>
+    <div class="hidden-content hidden">
+      <div class="card_image-holder">
+        <%= cl_image_tag @weapon.photo.key, max_width: 400, crop: :fill %>
+      </div>
+        <div class="card-description">
+          <%= @weapon.content %>
+        </div>
+        <div class="card-actions">
+          <%= link_to "View More", card_path(@weapon.id), class: "details" %>
         </div>
     </div>
   </div>

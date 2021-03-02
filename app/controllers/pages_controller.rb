@@ -3,6 +3,8 @@ class PagesController < ApplicationController
 
   def home
     @card = Card.last
+    @trick = Card.where(category: "Tricks").last
+    @weapon = Card.where(category: "Weapons").last
   end
 
   def profile
