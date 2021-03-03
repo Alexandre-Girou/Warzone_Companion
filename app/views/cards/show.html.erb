@@ -47,10 +47,11 @@
             <div class="upvotes-counter" data-votes-target="upcounter">
               <%= @card.votes.where(status: 'upvote').count %>
             </div>
-            <i class="fas fa-angle-double-down <%= current_user.downvoted?(@card) ? 'downvoted' : '' %> " data-action="click->votes#downvote"></i>
+            <p>--</p>
             <div class="downvotes-counter" data-votes-target="downcounter">
               <%= @card.votes.where(status: 'downvote').count %>
             </div>        
+            <i class="fas fa-angle-double-down <%= current_user.downvoted?(@card) ? 'downvoted' : '' %> " data-action="click->votes#downvote"></i>
           </div>
         </div>
         <div>
