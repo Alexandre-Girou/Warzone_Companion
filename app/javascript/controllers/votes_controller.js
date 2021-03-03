@@ -1,8 +1,10 @@
 import { Controller } from "stimulus"
 import { fetchWithToken } from "../utils/fetch_with_token"
+
 export default class extends Controller {
   static values = { cardId: String };
   static targets = [ "upcounter", "downcounter" ];
+
   upvote() {
     fetchWithToken(`/cards/${this.cardIdValue}/votes`, { 
       method: "POST", 
@@ -31,6 +33,7 @@ export default class extends Controller {
         };
       });
   };
+
   downvote() {
     fetchWithToken(`/cards/${this.cardIdValue}/votes`, { 
       method: "POST", 
@@ -57,18 +60,22 @@ export default class extends Controller {
           }
         };
       });
-  };
+  }
+
   colorupvote() {
     document.querySelector('.fa-angle-double-up').classList.add("upvoted");
   }
+
   colordownvote() {
     document.querySelector('.fa-angle-double-down').classList.add("downvoted");
   }
+
   decrementUpvotes() {
     let votenum = document.querySelector('.upvotes-counter');
     console.log(votenum)
     --votenum;
   }
+
   decrementDownvotes() {
     let votenum = document.querySelector('.downvotes-counter');
     console.log(votenum)

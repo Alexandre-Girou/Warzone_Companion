@@ -30,7 +30,7 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { handleForm } from "../forms/form.js"
-import { showCardDetails } from "../cards/card.js"
+import { showCardsDetails } from "../cards/card.js"
 import { showIndexDetails } from "../cards/cardsIndex.js"
 import { deckDestroyer } from "../decks/deckDestroyer.js"
 import { ellipsifyInit } from "../cards/cardsContent.js"
@@ -38,7 +38,7 @@ import { ellipsifyInit } from "../cards/cardsContent.js"
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   handleForm()
-  showCardDetails()
+  showCardsDetails()
   showIndexDetails()
   ellipsifyInit()
   // deckDestroyer()
