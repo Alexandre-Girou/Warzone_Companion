@@ -15,23 +15,19 @@ class CardsController < ApplicationController
     @card = Card.new(card_params)
     @card.creator = current_user
 
-    if @card.save
-      redirect_to @card
-    else
-      render 'new'
-    end
+    @card.save ? (redirect_to @card) : (render "new")
+  end
+
+  def destroy
+    @card = Card.find(params[:id])
+    @card.destroy ? (flash[:alert] = "card deleted.") : (flash[:error] = "Something went wrong.")
+    redirect_to profile_path
   end
 
   def show
     @card = Card.find(params[:id])
     @comment = Comment.new
     @comments = @card.comments
-  end
-
-  def destroy
-    @card = Card.find(params[:id])
-    @card.destroy ? "card deleted." : "Something went wrong."
-    redirect_to profile_path
   end
 
   private
