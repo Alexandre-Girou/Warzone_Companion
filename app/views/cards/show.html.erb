@@ -12,18 +12,24 @@
             <i class="fas fa-book"></i>
           <% end %>
           <% if @card.level == "Beginner" %>
+            <div class="d-flex">
             <h4>Level : </h4>
             <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+            </div>
           <% elsif @card.level == "Intermediate" %>
+            <div class="d-flex">
             <h4>Level : </h4>
             <% 2.times do %>
               <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
+            </div>
           <% elsif @card.level == "Confirmed" %>
+            <div class="d-flex">
             <h4>Level : </h4>
             <% 3.times do %>
               <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             <% end %>
+            </div>
           <% end %>
         </div>
 
@@ -47,7 +53,7 @@
             <div class="upvotes-counter" data-votes-target="upcounter">
               <%= @card.votes.where(status: 'upvote').count %>
             </div>
-            <p>--</p>
+            <p class="mx-1 mb-0">|</p>
             <div class="downvotes-counter" data-votes-target="downcounter">
               <%= @card.votes.where(status: 'downvote').count %>
             </div>        

@@ -150,6 +150,7 @@ div.card {
   }
   .level-category {
     text-align: center;
+    justify-content: space-between;
     display: flex;
     margin-left: 12px;
     h4 {
@@ -159,7 +160,8 @@ div.card {
   }
   i {
     font-size: 35px;
-    margin-right: auto;
+    margin-left: 10px;
+    margin-right: 10px;
   }
   #ak-icon {
     width: 35px;
