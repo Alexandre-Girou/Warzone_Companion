@@ -54,7 +54,7 @@ Rails.application.configure do
   config.assets.debug = false
 
   ##############
-  config.assets.check_precompiled_asset = false
+  # config.assets.check_precompiled_asset = false
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
