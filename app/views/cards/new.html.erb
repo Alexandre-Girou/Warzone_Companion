@@ -1,7 +1,7 @@
 <div class="create-card-container">
   <div class="form-border">
     <%= simple_form_for @card do |f| %>
-      <%= f.input :title %>
+      <%= f.input :title, maxlength: 20 %>
       <%= f.input :category, collection: ["Tricks", "Weapons"], input_html: { id: "category" } %>   
       <%= f.input :level, collection: ["Beginner", "Intermediate", "Confirmed"], wrapper_html: { class: 'hidden', id: "level" } %>
       <%= f.input :photo, as: :file %>

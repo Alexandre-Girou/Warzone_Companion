@@ -26,7 +26,7 @@
       </div>
       <div class="modal-body">
       <%= simple_form_for @deck do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, maxlength: 15 %>
         <div class="button-index">
           <%= f.submit "Create", class: "btn-index" %>
         </div>
