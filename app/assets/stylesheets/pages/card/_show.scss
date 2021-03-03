@@ -24,6 +24,7 @@ div .votes {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  max-width: 100px;
+  align-items: center;
+  max-width: 150px;
   margin: auto;
 }
