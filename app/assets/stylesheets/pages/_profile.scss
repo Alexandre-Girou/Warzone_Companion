@@ -105,37 +105,10 @@ button {
   border-radius: 15px;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-<<<<<<< HEAD
-  animation-name: slidein2;
-=======
   animation-name: slidein;
->>>>>>> 1bac4e12b478cbe6050a320844b7f832409bcfb7
   text-decoration: none;
   background-image: asset_url("Dot.png");
   box-shadow: inset 0 0 1em black, 0 0 1em black;
   box-shadow: 0px 0px 25px #7d9fa5;
   margin-top: 20px;
-<<<<<<< HEAD
-}
-
-@keyframes slidein2 {
-  from {
-    background-color: #080127;
-    text-shadow: 0px 0px 0px #4c5c5f;
-    color: #7d9fa5;
-  }
-
-  50% {
-    background-color: #080127;
-    text-shadow: 0px 0px 10px #4c5c5f;
-    color: #7d9fa5;
-  }
-
-  to {
-    background-color: #080127;
-    text-shadow: 0px 0px 0px #4c5c5f;
-    color: #7d9fa5; 
-  }
-=======
->>>>>>> 1bac4e12b478cbe6050a320844b7f832409bcfb7
 }
