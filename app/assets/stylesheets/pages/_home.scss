@@ -44,8 +44,125 @@
   }
 }
 
-
+#rounded-btn {
+  border-radius: 15px;
+}
 
 h1, h3, h4 {
   text-align: center;
+}
+
+
+// INTRO CARD
+
+.container-intro{
+  width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
+}
+
+.container-intro .card-intro{
+  position: relative;
+  margin: auto;
+}
+
+.container-intro .card-intro .face{
+  width:300px;
+  height: 200px;
+  transition:.4s; 
+}
+
+.container-intro .card-intro .face.face1{
+  position: relative;
+  background-image: asset_url("Dot.png");
+  display: flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  z-index: 1;
+  transform: translateY(100px);
+}
+
+.container-intro .card-intro:hover .face.face1{
+  transform: translateY(0);
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px orange,
+    inset -20px 0 80px red,
+    inset 20px 0 300px orange,
+    inset -20px 0 300px red,
+    0 0 50px #fff,
+    -10px 0 80px orange,
+    10px 0 80px red;  
+}
+
+
+.container-intro .card-intro .face.face1 .content-intro{
+  transition:  0.5s;
+  text-align: center;
+}
+
+.container-intro .card-intro:hover .face.face1 .content-intro{
+  opacity: 1;
+}
+
+.container-intro .card-intro .face.face1 .content-intro i{
+  font-size: 3em;
+  color: white;
+  display: inline-block;   
+}
+
+.container-intro .card-intro .face.face1 .content-intro h2{
+  font-size: 25px;
+  color: $tan;
+  text-align: center;
+  text-shadow: 2px 2px 15px black;
+}
+
+.container-intro .card-intro .face.face1 .content-intro a{
+  transition: .5s;
+}
+
+.container-intro .card-intro .face.face2{
+  position: relative;
+  background-image: asset_url("Dot.png");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-bottom: 0;
+  padding-top: 40px;
+  box-sizing: border-box;
+  box-shadow: 0 20px 50px rgba(0,0,0,.8);
+  transform: translateY(-100px);
+}
+
+.container-intro .card-intro:hover .face.face2{
+  transform: translateY(0);
+}
+
+.container-intro .card-intro .face.face2 .content-intro p, a{
+  font-size: 10pt;
+  font-family: 'Black Ops One', cursive;
+  margin: 0 ;
+  padding: 0;
+  color: $tan;
+}
+
+.container-intro .card-intro .face.face2 .content-intro a{
+  text-decoration:none;
+  color: black;
+  box-sizing: border-box;
+  outline : 1px dashed #333;
+  padding: 10px;
+  margin: 15px 0 0;
+  display: inline-block;
+}
+
+.container-intro .card-intro .face.face2 .content-intro a:hover{
+  background: #333 ;
+  color: whitesmoke; 
+  box-shadow: inset 0px 0px 10px rgba(0,0,0,0.5);
 }
