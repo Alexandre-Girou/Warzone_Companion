@@ -1,65 +1,65 @@
-.btn-signin {
-  padding: 15px 15px;
+.btn-deck {
+  min-height: 16px;
+  padding: 12px 20px;
   transition-property: text-shadow, background-color, border, color;
   transition-duration: 1s;
   position: relative;
   background-color: #282828;
-  font-family: 'DotGothic16', sans-serif;
+  font-family: 'Black Ops One', cursive;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #81898c;
   line-height: 1.15;
   text-transform: uppercase;
-  width: fit-content;
+  margin: 0;
+  width: auto;
   background-size: 2px;
+  border: 1px solid #81898c;
+  border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
   text-shadow: 0px 0px 0px #97cde1;
   background-color: transparent;
   background-color: #080127;
-  color: #94bbc2;
-  box-shadow: 0px 0px 25px #79d9ff;
-  border: 1px solid #79d9ff;
+  color: #7d9fa5;
+  border: 2px solid #23282b;
   display: block;
+  height: 90px;
+  width: 90px;
   text-align: center;
-  border-radius: 50%;
+  border-color: 0px 0px 10px #23282b;
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-name: slidein;
   text-decoration: none;
-  height: 60px;
-  width: 60px;
-  background: black;
   background-image: asset_url("Dot.png");
   box-shadow: inset 0 0 1em black, 0 0 1em black;
+  box-shadow: 0px 0px 25px #7d9fa5;
 }
 
-.btn-signin:hover {
-  text-decoration: none;
-}
-
-.button-signin {
+.button-deck {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  padding: 5px;
 }
 
 @keyframes slidein {
   from {
     background-color: #080127;
-    text-shadow: 0px 0px 0px #97cde1;
-    color: #94bbc2;
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5;
   }
 
   50% {
     background-color: #080127;
-    text-shadow: 0px 0px 10px #79d9ff;
-    color: #79d9ff;
+    text-shadow: 0px 0px 10px #4c5c5f;
+    color: #7d9fa5;
   }
 
   to {
     background-color: #080127;
-    text-shadow: 0px 0px 0px #97cde1;
-    color: #94bbc2; 
+    text-shadow: 0px 0px 0px #4c5c5f;
+    color: #7d9fa5; 
   }
 }
