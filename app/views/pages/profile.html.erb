@@ -2,7 +2,7 @@
   <div class="left-column">
     <h1><%= @user.username %></h1>
     <%= cl_image_tag @user.photo.key, id: "user-avatar" %>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deckModal">New deck</button>
+    <button type="button" class="btn btn-create-deck" data-toggle="modal" data-target="#deckModal">New deck</button>
   </div>
   <div class="right-column">
     <h1>Stats :</h1>
