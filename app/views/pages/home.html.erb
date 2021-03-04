@@ -1,16 +1,30 @@
 <div class="w-full">
   
-<div class="intro">
+<%# <div class="intro">
   <div class="img-intro">
     <div class="text-intro">
       <p>Hello soldier, here you can improve two times faster than your friends !</p>
       <p>Discover tips and loadouts according to your current level and share your experience with the world !</p>
     </div>
   </div>    
-</div>
+</div> %>
 
-<div class="button-index">
-  <%= link_to "All Cards", cards_path, class: 'btn-index' %>
+<div class="container-intro">
+  <div class="card-intro">
+    <div class="face face1">
+      <div class="content-intro">           
+        <h2>New here ?</h2>
+        <h2><small>Click me</small></h2>
+      </div>
+    </div>
+    <div class="face face2">
+      <div class="content-intro">
+        <p>Hello soldier, here you can improve two times faster than your friends !</p>
+        <br>
+        <p>Discover tips and loadouts according to your current level and share your experience with the world !</p>
+      </div>
+    </div>
+  </div>
 </div>
 
   <h3>Latest trick</h3>
@@ -56,3 +70,7 @@
         </div>
     </div>
   </div>
+
+<div class="button-index" id="rounded-btn">
+  <%= link_to "All Cards", cards_path, class: 'btn-index' %>
+</div>

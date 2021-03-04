@@ -51,23 +51,14 @@
             </div>        
             <i class="fas fa-angle-double-down <%= current_user.downvoted?(@card) ? 'downvoted' : '' %> " data-action="click->votes#downvote"></i>
           </div>
-          <div class="deck-add">
-            <div class="deck-search">
-              <%= form_tag(card_favorites_path(@card), method: :post, id: "form-text") do %>
-                <%= select_tag :name,
-                  options_for_select(Deck.where(user: current_user).pluck(:name)),
-                  class: "form-control",
-                  prompt: "Select a deck to put this card in:"
-                %>
-            </div>
-                <div class="btn-add-to-deck">
-                <%= submit_tag "Add to", class: "btn btn-primary" %>
-              <% end %>
-                </div>
-          </div>
-          <div class="creator">
-            <p><small>Creator : </small><%= @card.creator.username %> </p>
-          </div>
+        </div>
+        <div class="button-deck">
+          <button type="button" class="btn-deck" data-toggle="modal" data-target="#deckModal">
+            Add to deck
+          </button>
+        </div>
+        <div class="creator">
+          <p><small>Creator : </small><%= @card.creator.username %> </p>
         </div>
       </div>
     </div>
@@ -99,5 +90,32 @@
       <%= f.input :content, as: :rich_text_area, label: false %>
       <%= f.submit class: "btn-index" %>
     <% end %>
+  </div>
+</div>
+
+<div class="modal fade" id="deckModal" tabindex="-1" role="dialog" aria-labelledby="deckModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deckModalLabel">Add this card to your deck</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= form_tag card_favorites_path(@card), method: :post do %>
+          <div>
+            <%= select_tag :name,
+              options_for_select(Deck.where(user: current_user).pluck(:name)),
+              class: "form-control",
+              prompt: "Select a deck to put this card in:"
+            %>
+          </div>
+          <div class="">
+            <%= submit_tag "Add", class: "btn btn-index" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

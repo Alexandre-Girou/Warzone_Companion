@@ -1,22 +1,22 @@
-.btn-index {
+.btn-deck {
   min-height: 16px;
   padding: 12px 20px;
   transition-property: text-shadow, background-color, border, color;
   transition-duration: 1s;
   position: relative;
   background-color: #282828;
-  // font-family: 'Black Ops One', cursive;
+  font-family: 'Black Ops One', cursive;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
   color: #81898c;
   line-height: 1.15;
   text-transform: uppercase;
-  margin: 0 0 40px 0;
-  margin-top: 15px;
-  width: fit-content;
+  margin: 0;
+  width: auto;
   background-size: 2px;
   border: 1px solid #81898c;
+  border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
   text-shadow: 0px 0px 0px #97cde1;
@@ -24,32 +24,27 @@
   background-color: #080127;
   color: #7d9fa5;
   border: 2px solid #23282b;
-  min-width: 162px;
   display: block;
-  min-width: 150px;
-  max-width: 200px;
+  height: 90px;
+  width: 90px;
   text-align: center;
   border-color: 0px 0px 10px #23282b;
-  border-radius: 3px;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-name: slidein;
+  animation-name: slidein1;
   text-decoration: none;
   background-image: asset_url("Dot.png");
   box-shadow: inset 0 0 1em black, 0 0 1em black;
   box-shadow: 0px 0px 25px #7d9fa5;
 }
 
-.btn-index:hover {
-  text-decoration: none;
-}
-
-.button-index {
+.button-deck {
   display: flex;
   justify-content: center;
+  padding: 5px;
 }
 
-@keyframes slidein {
+@keyframes slidein1 {
   from {
     background-color: #080127;
     text-shadow: 0px 0px 0px #4c5c5f;
