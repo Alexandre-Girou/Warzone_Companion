@@ -23,13 +23,13 @@ div.cards {
 div.card {
   background-color: rgba($color: $tan, $alpha: 0.8);
   display: inline-block;
-  margin: 8px;
-  max-width: 400px;
+  margin: 0 auto;
+  max-width: 425px;
   perspective: 1000;
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
-  width: 400px;
+  width: 95%;
   z-index: 500;
   border-radius: 10px;
   border: solid 1px;
