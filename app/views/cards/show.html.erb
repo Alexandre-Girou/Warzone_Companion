@@ -51,14 +51,14 @@
             </div>        
             <i class="fas fa-angle-double-down <%= current_user.downvoted?(@card) ? 'downvoted' : '' %> " data-action="click->votes#downvote"></i>
           </div>
-        </div>
-        <div class="button-deck">
-          <button type="button" class="btn-deck" data-toggle="modal" data-target="#deckModal">
-            Add to deck
-          </button>
-        </div>
-        <div class="creator">
-          <p><small>Creator : </small><%= @card.creator.username %> </p>
+          <div class="button-deck">
+            <button type="button" class="btn-deck" data-toggle="modal" data-target="#deckModal">
+              Add to deck
+            </button>
+          </div>
+          <div class="creator">
+            <p><small>Creator: </small><br><%= @card.creator.username %> </p>
+          </div>
         </div>
       </div>
     </div>
