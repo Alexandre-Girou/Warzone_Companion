@@ -3,21 +3,37 @@
   vertical-align: middle;
   width: auto;
   height: auto;
-  max-width: 350px;
-  max-height: 350px;
+  max-width: 170px;
+  max-height: 170px;
   margin: 20px 20px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 15px black;
 }
 
 .profile-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
   border: 2px solid $tan;
   border-radius: 15px;
   background-color: rgba(154, 129, 72, 0.6);
   width: 400px;
   margin: auto;
   margin-bottom: 20px;
+  h1 {
+    margin-top: 10px;
+    font-size: 150%;
+    background-image: asset_url("Dot.png");
+    max-width: fit-content;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 15px black;
+  }
 }
 
 h2 {
@@ -31,4 +47,25 @@ h1, h3, h4 {
 button {
   margin: auto;
   margin-bottom: 20px;
+}
+
+.left-column {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.right-column {
+  grid-column: 2;
+  grid-row: 1;
+  text-align: center;
+}
+
+.stats-card {
+  border: 2px solid $tan;
+  border-radius: 15px;
+  width: 150px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  background-color: rgba(154, 129, 72, 0.3);
+  box-shadow: 2px 2px 15px black;
 }

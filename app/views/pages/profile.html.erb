@@ -1,17 +1,20 @@
 <div class="profile-card">
-  <h1><%= @user.username %></h1>
-  <div>
+  <div class="left-column">
+    <h1><%= @user.username %></h1>
     <%= cl_image_tag @user.photo.key, id: "user-avatar" %>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deckModal">New deck</button>
   </div>
-  <h1>Stats :</h1>
-  <p>Member since: <%= @user.created_at.strftime("%d/%m/%Y") %></p>
-  <p>Upvotes : <%= @user.votes.count %></p>
-  <p>Favorites cards : <%= @user.favorites.count %></p>
-  <p>Created cards : <%= @user.cards.count %></p>
-  <p>Comments : <%= @user.comments.count %></p>
+  <div class="right-column">
+    <h1>Stats :</h1>
+    <div class="stats-card">
+      <p>Member since: <%= @user.created_at.strftime("%d/%m/%Y") %></p>
+      <p>Upvotes : <%= @user.votes.count %></p>
+      <p>Favorites cards : <%= @user.favorites.count %></p>
+      <p>Created cards : <%= @user.cards.count %></p>
+      <p>Comments : <%= @user.comments.count %></p>
+    </div>
+  </div>
 </div>
-
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#deckModal">New deck</button>
 
 <%= render 'decks/list' %>
 
