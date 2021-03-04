@@ -13,34 +13,25 @@
           <% end %>
           <% if @card.level == "Beginner" %>
             <div class="d-flex">
-            <h4>Level : </h4>
-            <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <h4>Level : </h4>
+              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
             </div>
           <% elsif @card.level == "Intermediate" %>
             <div class="d-flex">
-            <h4>Level : </h4>
-            <% 2.times do %>
-              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
-            <% end %>
+              <h4>Level : </h4>
+              <% 2.times do %>
+                <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <% end %>
             </div>
           <% elsif @card.level == "Confirmed" %>
             <div class="d-flex">
-            <h4>Level : </h4>
-            <% 3.times do %>
-              <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
-            <% end %>
+              <h4>Level : </h4>
+              <% 3.times do %>
+                <img id="stars" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/US-O7_insignia.svg/200px-US-O7_insignia.svg.png" alt="stars">
+              <% end %>
             </div>
           <% end %>
         </div>
-
-        <%= form_tag card_favorites_path(@card), method: :post do %>
-          <%= select_tag :name,
-            options_for_select(Deck.where(user: current_user).pluck(:name)),
-            class: "form-control",
-            prompt: "Select a deck to put this card in:"
-          %>
-          <%= submit_tag "Add to", class: "btn btn-primary" %>
-        <% end %>
 
         <div class="card_image-holder">
           <%= cl_image_tag @card.photo.key, max_width: 400, crop: :fill %>
@@ -48,6 +39,7 @@
         <div class="card-description">
           <%= @card.content %>
         </div>
+        <div class="bottom-card">
           <div class="votes" data-controller="votes" data-votes-card-id-value="<%= @card.id %>">
             <i class="fas fa-angle-double-up <%= current_user.upvoted?(@card) ? 'upvoted' : '' %> " data-action="click->votes#upvote"></i>
             <div class="upvotes-counter" data-votes-target="upcounter">
@@ -59,26 +51,49 @@
             </div>        
             <i class="fas fa-angle-double-down <%= current_user.downvoted?(@card) ? 'downvoted' : '' %> " data-action="click->votes#downvote"></i>
           </div>
-        </div>
-        <div>
-          <p>Creator : <%= @card.creator.username %> </p>
+          <div class="deck-add">
+            <div class="deck-search">
+              <%= form_tag(card_favorites_path(@card), method: :post, id: "form-text") do %>
+                <%= select_tag :name,
+                  options_for_select(Deck.where(user: current_user).pluck(:name)),
+                  class: "form-control",
+                  prompt: "Select a deck to put this card in:"
+                %>
+            </div>
+                <div class="btn-add-to-deck">
+                <%= submit_tag "Add to", class: "btn btn-primary" %>
+              <% end %>
+                </div>
+          </div>
+          <div class="creator">
+            <p><small>Creator : </small><%= @card.creator.username %> </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 
-<h2>Comments :</h2>
+<h2>Comments : (<%= @card.comments.count %>)</h2>
 
-<div class="display-comments">
-  <% @card.comments.each do |comment| %>
-    <p><%= comment.creator.username %> : <%= comment.content %></p>
-  <% end %>
-</div>
+  <div class="display-comments">
+      <% @card.comments.each do |comment| %>
+        <div class="display-comment">
+          <div class="user-title">
+            <div class="user-img">
+              <%= cl_image_tag comment.creator.photo.key, id: "user-avatar" %>
+            </div>
+            <h2><%= comment.creator.username %> : </h2>
+          </div>
+          <hr>
+          <p><%= comment.content %></p>
+        </div>
+      <% end %>
+  </div>
 
 <h2>Add a comment :</h2>
 
-<div class="create-card-container">
+<div class="create-comment-container">
   <div class="form-border">
     <%= simple_form_for([@card, @comment], method: :post) do |f| %>
       <%= f.input :content, as: :rich_text_area, label: false %>
