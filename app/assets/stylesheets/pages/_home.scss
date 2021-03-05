@@ -5,6 +5,11 @@
   padding-bottom: 88px;
 }
 
+.w-full {
+  display: flex;
+  flex-direction: column;
+}
+
 .intro {
   display: flex;
   align-content: center;

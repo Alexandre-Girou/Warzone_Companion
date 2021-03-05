@@ -14,7 +14,7 @@
         </div>
         <div class="hid-content hidden">
           <div class="card_image-holder">
-            <%= cl_image_tag card.photo.key, max_width: 400, crop: :fill %>
+            <%= cl_image_tag card.photo.key, max_width: 250, crop: :fill %>
           </div>
           <div class="card-description target">
             <%= card.content %>
@@ -26,6 +26,10 @@
       </div>
     <% end %>
   </div>
+</div>
+
+<div class="button-index" id="rounded-btn">
+  <%= link_to "Create Card", new_card_path, class: 'btn-index' %>
 </div>
 
 <% content_for :meta_title, "#{@card.last.name} is on #{DEFAULT_META["meta_product_name"]}" %>
