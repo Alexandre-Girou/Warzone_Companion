@@ -74,3 +74,7 @@
 <div class="button-index" id="rounded-btn">
   <%= link_to "All Cards", cards_path, class: 'btn-index' %>
 </div>
+
+<% content_for :meta_title, "#{@weapon.title} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @weapon.content %>
+<% content_for :meta_image, cl_image_path(@weapon.photo.key) %>
