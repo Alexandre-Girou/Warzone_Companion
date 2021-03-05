@@ -10,10 +10,11 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.card = Card.find(params[:card_id])
+    @card = Card.find(params[:card_id])
     @comment.creator = current_user
     @comment.save ? (flash[:notice] = "Comment successfully created") : (flash[:alert] = "Something went wrong")
 
-    redirect_to @comment.card
+    redirect_to @card
   end
 
   private
