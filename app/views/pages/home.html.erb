@@ -76,5 +76,5 @@
 </div>
 
 <% content_for :meta_title, "#{@weapon.title} is on #{DEFAULT_META["meta_product_name"]}" %>
-<% content_for :meta_description, @weapon.content %>
+<% content_for :meta_description, @weapon.content.body.to_plain_text %>
 <% content_for :meta_image, cl_image_path(@weapon.photo.key) %>
