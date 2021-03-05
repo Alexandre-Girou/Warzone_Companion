@@ -39,6 +39,7 @@
         <div class="card-description">
           <%= @card.content %>
         </div>
+        <hr>
         <div class="bottom-card">
           <div class="votes" data-controller="votes" data-votes-card-id-value="<%= @card.id %>">
             <i class="fas fa-angle-double-up <%= current_user.upvoted?(@card) ? 'upvoted' : '' %> " data-action="click->votes#upvote"></i>
