@@ -29,12 +29,13 @@ trix-editor {
     position: relative;
     width: 100%;
     justify-content: center;
-    padding: 60px;
   }
   
   .form-border {
     padding: 25px;
     border: solid;
-    border-radius: 3px;
+    border-radius: 10px;
     background-color: rgba(154, 129, 72, 0.8);
+    width: 95%;
+    margin: auto;
   }
