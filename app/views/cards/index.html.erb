@@ -31,3 +31,7 @@
 <div class="button-index" id="rounded-btn">
   <%= link_to "Create Card", new_card_path, class: 'btn-index' %>
 </div>
+
+<% content_for :meta_title, "#{@card.last.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @card.last.description %>
+<% content_for :meta_image, cl_image_path(@card.last.photo.path) %>
