@@ -21,7 +21,7 @@
         </div>
         <div class="hid-content hidden">
           <div class="card_image-holder">
-            <img class="card_image" src="https://img.gfinityesports.com/news/image/7/1/1500x0-nc/how_to_win_call_of_duty_warzone_AiwLTH3.jpg" />
+            <%= cl_image_tag card.photo.key, max_width: 400, crop: :fill %>
           </div>
           <div class="card-description target">
             <%= card.content %>
